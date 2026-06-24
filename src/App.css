@@ -1,0 +1,10 @@
+/* App-level resets — component styles live in their own .css files */
+#root {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  text-align: left;
+  border: none;
+  min-height: 100svh;
+  display: block;
+}

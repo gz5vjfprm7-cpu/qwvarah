@@ -1,0 +1,82 @@
+.footer {
+  background: var(--bg-card2);
+  border-top: 1px solid var(--border);
+  padding-top: 4rem;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 4rem;
+  padding-bottom: 3rem;
+}
+
+.footer-brand .nav-logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.footer-tagline {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 320px;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.footer-col h4 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--green);
+  margin-bottom: 1rem;
+}
+
+.footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.footer-col a {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.footer-col a:hover { color: var(--green); }
+
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding: 1.25rem 0;
+}
+
+.footer-bottom .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.footer-made { color: var(--green); opacity: 0.6; }
+
+@media (max-width: 768px) {
+  .footer-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
+@media (max-width: 480px) {
+  .footer-links { grid-template-columns: 1fr; }
+}
