@@ -43,6 +43,12 @@ const SERVICES = [
     desc: 'Stop losing leads to silence. AI-powered follow-up sequences nurture prospects through email, SMS, and DMs until they convert — automatically.',
     tags: ['Email + SMS', 'Lead Nurture', 'Auto-Sequences'],
   },
+  {
+    icon: '🌐',
+    title: 'Website Design & Development',
+    desc: 'Custom AI-built websites designed to your exact vision — fast, professional, and built to convert visitors into customers. Fully mobile ready and delivered fast.',
+    tags: ['Custom Design', 'Mobile Ready', 'Fast Delivery'],
+  },
 ];
 
 export default function Services() {
@@ -69,6 +75,7 @@ export default function Services() {
                   <span key={t} className="card-tag">{t}</span>
                 ))}
               </div>
+              <p className="card-quote">Custom quote — free in 24hrs</p>
             </div>
           ))}
         </div>

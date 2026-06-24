@@ -9,6 +9,7 @@ const SERVICES = [
   'AI Receptionist',
   'SEO Content',
   'CRM Follow-Up',
+  'Website Design & Development',
   'Not Sure Yet',
 ];
 
