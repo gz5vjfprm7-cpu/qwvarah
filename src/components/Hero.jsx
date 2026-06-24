@@ -9,6 +9,7 @@ const TYPED_WORDS = [
   'SEO Content',
   'CRM Follow-Up',
   'AI Video',
+  'Custom Websites',
 ];
 
 export default function Hero() {

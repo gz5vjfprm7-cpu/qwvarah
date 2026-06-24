@@ -1,13 +1,24 @@
 import './Footer.css';
 
+const FOOTER_SERVICES = [
+  'AI Chatbot',
+  'Social Media Content',
+  'Workflow Automation',
+  'AI Video',
+  'AI Receptionist',
+  'SEO Content',
+  'CRM Follow-Up',
+  'Website Design & Development',
+];
+
 export default function Footer() {
   return (
     <footer className="footer">
       <div className="container footer-inner">
         <div className="footer-brand">
-          <span className="nav-logo">
-            <span style={{color:'var(--green)'}}>[ </span>Qwvarah<span style={{color:'var(--green)'}}>.</span>AI<span style={{color:'var(--green)'}}> ]</span>
-          </span>
+          <a href="#" className="footer-logo">
+            <span className="footer-logo-bracket">[</span>Qwvarah<span className="footer-logo-dot">.</span>AI<span className="footer-logo-bracket">]</span>
+          </a>
           <p className="footer-tagline">
             AI-powered growth systems for small businesses. We make automation accessible.
           </p>
@@ -17,7 +28,7 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Services</h4>
             <ul>
-              {['AI Chatbot','Social Media','Workflow Automation','AI Video','AI Receptionist','SEO Content','CRM Follow-Up'].map(s => (
+              {FOOTER_SERVICES.map(s => (
                 <li key={s}><a href="#services">{s}</a></li>
               ))}
             </ul>

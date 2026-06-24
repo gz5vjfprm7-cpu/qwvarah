@@ -81,7 +81,21 @@
   height: 2px;
   background: var(--text);
   border-radius: 2px;
-  transition: all 0.3s;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburger span:nth-child(1).open {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger span:nth-child(2).open {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger span:nth-child(3).open {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 @media (max-width: 768px) {

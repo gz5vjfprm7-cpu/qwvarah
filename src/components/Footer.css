@@ -11,13 +11,18 @@
   padding-bottom: 3rem;
 }
 
-.footer-brand .nav-logo {
+.footer-logo {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
   display: block;
   margin-bottom: 1rem;
+  color: var(--text);
+  letter-spacing: 0.02em;
 }
+
+.footer-logo-bracket { color: var(--green); }
+.footer-logo-dot { color: var(--green); text-shadow: 0 0 8px var(--green); }
 
 .footer-tagline {
   font-size: 0.88rem;

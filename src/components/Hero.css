@@ -219,3 +219,8 @@
   .hero-desc { font-size: 1rem; }
   .btn-primary, .btn-ghost { width: 100%; justify-content: center; }
 }
+
+@media (max-width: 380px) {
+  .hero-title { font-size: 2rem; }
+  .hero-badge { font-size: 0.72rem; text-align: center; }
+}

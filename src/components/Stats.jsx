@@ -10,7 +10,7 @@ const STATS = [
 
 export default function Stats() {
   return (
-    <div className="stats-bar">
+    <div className="stats-bar" id="results">
       <div className="container stats-inner">
         {STATS.map((s, i) => (
           <div key={i} className="stat-item">

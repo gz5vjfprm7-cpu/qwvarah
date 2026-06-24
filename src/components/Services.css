@@ -11,8 +11,6 @@
   gap: 1.5rem;
 }
 
-/* 7th card alone on its row — no longer applies with 8 cards */
-
 .service-card {
   position: relative;
   background: var(--bg-card);
@@ -104,7 +102,6 @@
 
 @media (max-width: 900px) {
   .services-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
-  .service-card:last-child:nth-child(3n+1) { grid-column: auto; }
 }
 
 @media (max-width: 640px) {
