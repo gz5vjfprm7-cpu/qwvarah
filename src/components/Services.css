@@ -44,10 +44,23 @@
 .service-card:hover .card-glow { opacity: 1; }
 
 .card-icon {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
-  display: block;
-  filter: drop-shadow(0 0 8px rgba(0,255,136,0.3));
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,255,136,0.07);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 1.2rem;
+  color: var(--green);
+  filter: drop-shadow(0 0 6px rgba(0,255,136,0.25));
+  transition: background 0.3s, filter 0.3s;
+}
+
+.service-card:hover .card-icon {
+  background: rgba(0,255,136,0.12);
+  filter: drop-shadow(0 0 10px rgba(0,255,136,0.4));
 }
 
 .card-title {

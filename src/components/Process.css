@@ -73,8 +73,16 @@
 }
 
 .step-icon {
-  font-size: 1.8rem;
-  margin-bottom: 0.6rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--green);
+  background: rgba(0,255,136,0.07);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin: 0 auto 0.65rem;
 }
 
 .step-title {
@@ -136,7 +144,12 @@
   flex: 1;
 }
 
-.step-icon-sm { font-size: 1.4rem; margin-bottom: 0.4rem; }
+.step-icon-sm {
+  display: flex;
+  align-items: center;
+  color: var(--green);
+  margin-bottom: 0.4rem;
+}
 
 @media (max-width: 900px) {
   .process-track { display: none; }

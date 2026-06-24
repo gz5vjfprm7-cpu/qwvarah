@@ -107,16 +107,16 @@
 }
 
 .bot-avatar {
-  font-size: 1.4rem;
   flex-shrink: 0;
   width: 40px;
   height: 40px;
-  background: var(--bg-card2);
+  background: rgba(0,255,136,0.07);
   border: 1px solid var(--border);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--green);
 }
 
 .bot-bubble {
@@ -251,7 +251,8 @@
 }
 
 .confirm-icon {
-  font-size: 3rem;
+  display: flex;
+  justify-content: center;
   margin-bottom: 1.25rem;
 }
 

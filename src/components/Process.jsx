@@ -1,3 +1,4 @@
+import { Target, Map, Zap, Microscope, TrendingUp } from 'lucide-react';
 import './Process.css';
 
 const STEPS = [
@@ -5,31 +6,31 @@ const STEPS = [
     num: '01',
     title: 'Discovery Call',
     desc: 'We learn your business, goals, pain points, and current tools in a free 30-minute strategy session.',
-    icon: '🎯',
+    Icon: Target,
   },
   {
     num: '02',
     title: 'Custom AI Blueprint',
     desc: 'Our team designs a tailored automation roadmap specific to your industry, workflow, and growth targets.',
-    icon: '🗺️',
+    Icon: Map,
   },
   {
     num: '03',
     title: 'Build & Integrate',
     desc: 'We deploy your AI systems and connect them directly to your existing tools — CRM, calendar, website, and more.',
-    icon: '⚡',
+    Icon: Zap,
   },
   {
     num: '04',
     title: 'Test & Refine',
     desc: 'Before going live, we rigorously test every flow, edge case, and handoff to ensure everything works perfectly.',
-    icon: '🔬',
+    Icon: Microscope,
   },
   {
     num: '05',
     title: 'Launch & Scale',
     desc: 'Go live with confidence. We monitor, optimize, and add new capabilities as your business grows.',
-    icon: '🚀',
+    Icon: TrendingUp,
   },
 ];
 
@@ -52,7 +53,9 @@ export default function Process() {
               <div className="step-connector" />
               <div className="step-card">
                 <div className="step-num">{step.num}</div>
-                <div className="step-icon">{step.icon}</div>
+                <div className="step-icon">
+                  <step.Icon size={22} strokeWidth={1.5} />
+                </div>
                 <h3 className="step-title">{step.title}</h3>
                 <p className="step-desc">{step.desc}</p>
               </div>
@@ -68,7 +71,9 @@ export default function Process() {
                 {i < STEPS.length - 1 && <div className="mobile-step-line" />}
               </div>
               <div className="mobile-step-content">
-                <div className="step-icon-sm">{step.icon}</div>
+                <div className="step-icon-sm">
+                  <step.Icon size={18} strokeWidth={1.5} />
+                </div>
                 <h3 className="step-title">{step.title}</h3>
                 <p className="step-desc">{step.desc}</p>
               </div>

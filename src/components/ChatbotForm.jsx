@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Bot, Check, CheckCircle } from 'lucide-react';
 import './ChatbotForm.css';
 
 const SERVICES = [
@@ -78,7 +79,9 @@ export default function ChatbotForm() {
         <div className="container">
           <div className="form-wrap">
             <div className="confirm-box">
-              <div className="confirm-icon">✅</div>
+              <div className="confirm-icon">
+                <CheckCircle size={52} strokeWidth={1.25} color="var(--green)" />
+              </div>
               <h2 className="confirm-title">You're All Set, {form.name}!</h2>
               <p className="confirm-sub">
                 Thanks for reaching out to Qwvarah. We've received your information and will be in touch within 24 hours to schedule your free AI strategy session.
@@ -123,7 +126,9 @@ export default function ChatbotForm() {
             {STEPS.map((label, i) => (
               <div key={i} className={`progress-step ${i <= step ? 'active' : ''} ${i < step ? 'done' : ''}`}>
                 <div className="progress-dot">
-                  {i < step ? '✓' : i + 1}
+                  {i < step
+                    ? <Check size={13} strokeWidth={2.5} />
+                    : i + 1}
                 </div>
                 <span className="progress-label">{label}</span>
               </div>
@@ -134,7 +139,9 @@ export default function ChatbotForm() {
             {step === 0 && (
               <div className="form-step">
                 <div className="bot-msg">
-                  <span className="bot-avatar">🤖</span>
+                  <div className="bot-avatar">
+                    <Bot size={18} strokeWidth={1.5} />
+                  </div>
                   <div className="bot-bubble">
                     Hey! I'm Qwvarah's AI assistant. Let's find out which AI services fit your business best. What's your name?
                   </div>
@@ -157,7 +164,9 @@ export default function ChatbotForm() {
             {step === 1 && (
               <div className="form-step">
                 <div className="bot-msg">
-                  <span className="bot-avatar">🤖</span>
+                  <div className="bot-avatar">
+                    <Bot size={18} strokeWidth={1.5} />
+                  </div>
                   <div className="bot-bubble">
                     Nice to meet you, {form.name}! What type of business do you run?
                   </div>
@@ -184,7 +193,9 @@ export default function ChatbotForm() {
             {step === 2 && (
               <div className="form-step">
                 <div className="bot-msg">
-                  <span className="bot-avatar">🤖</span>
+                  <div className="bot-avatar">
+                    <Bot size={18} strokeWidth={1.5} />
+                  </div>
                   <div className="bot-bubble">
                     Great! Which AI service are you most interested in for your {form.businessType} business?
                   </div>
@@ -211,7 +222,9 @@ export default function ChatbotForm() {
             {step === 3 && (
               <div className="form-step">
                 <div className="bot-msg">
-                  <span className="bot-avatar">🤖</span>
+                  <div className="bot-avatar">
+                    <Bot size={18} strokeWidth={1.5} />
+                  </div>
                   <div className="bot-bubble">
                     Almost there! What's your approximate monthly budget for AI services?
                   </div>
@@ -238,7 +251,9 @@ export default function ChatbotForm() {
             {step === 4 && (
               <div className="form-step">
                 <div className="bot-msg">
-                  <span className="bot-avatar">🤖</span>
+                  <div className="bot-avatar">
+                    <Bot size={18} strokeWidth={1.5} />
+                  </div>
                   <div className="bot-bubble">
                     Perfect! Last step — what's the best email to send your free AI strategy plan?
                   </div>
@@ -261,11 +276,11 @@ export default function ChatbotForm() {
             <div className="form-actions">
               {step > 0 && (
                 <button className="btn-back" onClick={back} type="button">
-                  ← Back
+                  Back
                 </button>
               )}
               <button className="btn-next" onClick={next} type="button">
-                {step < 4 ? 'Continue →' : 'Get My AI Plan ✨'}
+                {step < 4 ? 'Continue' : 'Get My AI Plan'}
               </button>
             </div>
           </div>
