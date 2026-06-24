@@ -37,6 +37,7 @@ const STEPS = ['Intro', 'Business', 'Services', 'Budget', 'Contact'];
 export default function ChatbotForm() {
   const [step, setStep] = useState(0);
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
     name: '',
     businessType: '',
@@ -65,10 +66,25 @@ export default function ChatbotForm() {
     return Object.keys(e).length === 0;
   };
 
-  const next = () => {
+  const next = async () => {
     if (!validate()) return;
-    if (step < 4) setStep(s => s + 1);
-    else setSubmitted(true);
+    if (step < 4) {
+      setStep(s => s + 1);
+    } else {
+      setLoading(true);
+      try {
+        await fetch('/api/notify', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(form),
+        });
+      } catch {
+        // fail silently — confirmation still shows regardless
+      } finally {
+        setLoading(false);
+        setSubmitted(true);
+      }
+    }
   };
 
   const back = () => setStep(s => s - 1);
@@ -279,8 +295,8 @@ export default function ChatbotForm() {
                   Back
                 </button>
               )}
-              <button className="btn-next" onClick={next} type="button">
-                {step < 4 ? 'Continue' : 'Get My AI Plan'}
+              <button className="btn-next" onClick={next} type="button" disabled={loading}>
+                {loading ? 'Sending...' : step < 4 ? 'Continue' : 'Get My AI Plan'}
               </button>
             </div>
           </div>

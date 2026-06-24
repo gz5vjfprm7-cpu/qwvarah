@@ -238,9 +238,14 @@
   max-width: 280px;
 }
 
-.btn-next:hover {
+.btn-next:hover:not(:disabled) {
   box-shadow: 0 0 24px rgba(0,255,136,0.4);
   transform: translateY(-1px);
+}
+
+.btn-next:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 /* Confirmation */
